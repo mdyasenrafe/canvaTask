@@ -1,12 +1,6 @@
 import {useFocusEffect} from '@react-navigation/native';
 import React, {useEffect} from 'react';
-import {
-  StyleSheet,
-  StatusBar,
-  Platform,
-  StatusBarStyle,
-  ViewStyle,
-} from 'react-native';
+import {StatusBar, Platform, StatusBarStyle, ViewStyle} from 'react-native';
 import {Edge} from 'react-native-safe-area-context';
 import {SafeAreaView} from '../SafeAreaView';
 
@@ -44,9 +38,5 @@ export const Screen: React.FC<ScreenProps> = ({
     }, [expandToTopEdge, statusBarStyle]),
   );
 
-  return (
-    <SafeAreaView backgroundColor="background" edges={edges}>
-      {children}
-    </SafeAreaView>
-  );
+  return <SafeAreaView edges={edges}>{children}</SafeAreaView>;
 };
