@@ -1,5 +1,7 @@
 export const palette = {
   primary: '#145E94',
+  neutral: '#B0AAAA',
+  accentBlue: '#4774AD',
   black: '#000000',
   white: 'white',
   red: '#FF5757',
@@ -9,13 +11,11 @@ export const palette = {
 
 export const BASE_COLORS = {
   primary: palette.primary,
+  neutral: palette.neutral,
+  accentBlue: palette.accentBlue,
   black: palette.black,
   white: palette.white,
   red: palette.red,
   grey: palette.grey,
   lightGrey: palette.lightGrey,
-};
-
-export const DARK_THEME = {
-  ...BASE_COLORS,
 };

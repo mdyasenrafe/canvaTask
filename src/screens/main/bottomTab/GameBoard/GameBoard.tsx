@@ -1,10 +1,11 @@
 import React from 'react';
-import {Box, Screen, Text} from '../../../../components/atom';
+import {Box, RemoteImage, Row, Screen, Text} from '../../../../components/atom';
+import {Header} from '../../../../components/molecules';
 
 export const GameBoard = () => {
   return (
-    <Screen name="GameBoard">
-      <Text>This is a gameboard screen</Text>
+    <Screen name="GameBoard" expandToTopEdge>
+      <Header />
     </Screen>
   );
 };
