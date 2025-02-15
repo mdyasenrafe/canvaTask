@@ -4,6 +4,7 @@ import ShareIcon from '../../../../../assets/icons/shareIcon.svg';
 import CalendarIcon from '../../../../../assets/icons/calenderIcon.svg';
 import ClockIcon from '../../../../../assets/icons/clockIcon.svg';
 import MessageIcon from '../../../../../assets/icons/messageIcon.svg';
+import {Platform} from 'react-native';
 
 export const GameBoardHeader = () => {
   const cardDetails = [
@@ -24,7 +25,7 @@ export const GameBoardHeader = () => {
         </Text>
         <ShareIcon />
       </Row>
-      <Row alignItems="center" mt="sm">
+      <Row alignItems="center" mt={Platform.OS === 'ios' ? 'sm' : 'none'}>
         {cardDetails.map((item, index) => {
           const IconComponent = item.Icon;
           return (

@@ -5,7 +5,7 @@ import PlayerPic3 from '../../../assets/images/player3.png';
 import PlayerPic4 from '../../../assets/images/player4.png';
 
 import {Box, Row, Text} from '../../atom';
-import {PlayerCard} from '..';
+import {PlayerCard} from '../PlayerCard';
 import {GameBoardHeader} from '../../organisms/GameBoardCard/components';
 
 export const GameBoardResults: React.FC = () => {
@@ -14,7 +14,7 @@ export const GameBoardResults: React.FC = () => {
       <Box borderBottomWidth={1} borderBottomColor="lightGrey" p="lg">
         <GameBoardHeader />
       </Box>
-      <Box px="lg" py="xl">
+      <Row py="xl" justifyContent="center" width={'100%'}>
         <Row alignItems="center" justifyContent="center" width="100%">
           <PlayerCard
             source={PlayerPic3}
@@ -29,7 +29,7 @@ export const GameBoardResults: React.FC = () => {
             borderColor="accentBlue"
             isLastItem={true}
           />
-          <Box px="lg">
+          <Box px="md">
             <Row width={48} justifyContent="center" alignItems="center" mb="sm">
               <Text variant="p2">1-3</Text>
             </Row>
@@ -77,10 +77,10 @@ export const GameBoardResults: React.FC = () => {
             name="Penn N."
             subtitle="(panther)"
             borderColor="accentBlue"
-            isLastItem={false}
+            isLastItem={true}
           />
         </Row>
-      </Box>
+      </Row>
     </Box>
   );
 };

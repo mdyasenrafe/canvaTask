@@ -6,7 +6,7 @@ import {
   ImageSourcePropType,
   StyleSheet,
 } from 'react-native';
-import {Box} from '..';
+import {Box} from '../Box';
 
 export type RemoteImageProps = Omit<ImageProps, 'source'> & {
   url?: string;

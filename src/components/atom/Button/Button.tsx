@@ -18,7 +18,7 @@ import {
   layout,
 } from '@shopify/restyle';
 import {palette} from '../../../theme/elements';
-import {Text, TextProps} from '..';
+import {Text, TextProps} from '../Text';
 import {Theme} from '../../../theme';
 
 type RestyleProps = SpacingProps<Theme> &

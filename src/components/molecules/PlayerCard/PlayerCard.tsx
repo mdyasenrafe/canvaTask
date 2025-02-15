@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, Row, Text, RemoteImage} from '../../atom';
 import PlusIcon from '../../../assets/icons/plusIcon.svg';
 import {TColor} from '../../../theme/elements';
+import {Platform} from 'react-native';
 
 interface PlayerCardProps {
   source?: any;
@@ -40,11 +41,15 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({
           />
         )}
       </Row>
-      <Box mt="sm">
+      <Box mt={Platform.OS == 'ios' ? 'sm' : 'xs'}>
         <Text variant="p4" textAlign="center">
           {name}
         </Text>
-        <Text color="neutral" variant="p5" textAlign="center" mt="xs">
+        <Text
+          color="neutral"
+          variant="p5"
+          textAlign="center"
+          mt={Platform.OS == 'ios' ? 'xs' : 'none'}>
           {subtitle}
         </Text>
       </Box>

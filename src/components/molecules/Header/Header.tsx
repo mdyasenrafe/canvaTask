@@ -5,6 +5,7 @@ import ProfilePic from '../../../assets/images/profilePic.png';
 
 export const Header = () => {
   const {top} = useSafeAreaInsets();
+  console.log(ProfilePic);
 
   return (
     <Box px="xl" bg="black" style={{paddingTop: top, paddingBottom: 12}}>

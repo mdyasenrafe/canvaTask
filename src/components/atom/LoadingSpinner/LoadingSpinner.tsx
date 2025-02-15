@@ -2,7 +2,7 @@ import React from 'react';
 import {ActivityIndicator} from 'react-native';
 import {getScreenDimensions} from '../../../utils/screenDimensions';
 import {palette} from '../../../theme/elements';
-import {Box} from '..';
+import {Box} from '../Box';
 
 type LoadingSpinnerProps = {
   height?: number;

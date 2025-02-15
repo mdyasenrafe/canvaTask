@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, RemoteImage, Row, Text} from '../../atom';
 import PlayerPic from '../../../assets/images/player.png';
+import {Platform} from 'react-native';
 
 type CardDetail = {
   Icon: React.FC<any>;
@@ -27,7 +28,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
             {title}
           </Text>
           <Text>{description}</Text>
-          <Row alignItems="center" mt="xs">
+          <Row alignItems="center" mt={Platform.OS === 'ios' ? 'sm' : 'none'}>
             {cardDetails.map((item, index) => {
               const IconComponent = item.Icon;
               return (

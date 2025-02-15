@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, Row, Text} from '../../atom';
 import ShareIcon from '../../../assets/icons/shareIcon.svg';
 import ClockIcon from '../../../assets/icons/clockIcon.svg';
+import {Platform} from 'react-native';
 
 export const NewsSystemMessage = () => {
   const cardDetails = [
@@ -22,7 +23,7 @@ export const NewsSystemMessage = () => {
         Lorem Ipsum is a term for a completely common meaningless text -
         sometimes also called Lorem Ipsum!
       </Text>
-      <Row alignItems="center" mt="sm">
+      <Row alignItems="center" mt={Platform.OS === 'ios' ? 'sm' : 'none'}>
         {cardDetails.map((item, index) => {
           const IconComponent = item.Icon;
           return (

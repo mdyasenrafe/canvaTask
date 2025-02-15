@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Box, Text, Row, RemoteImage} from '../../atom';
 import ClockIcon from '../../../assets/icons/clockIconWhite.svg';
@@ -35,7 +35,9 @@ export const NewsGradientCard: React.FC<NewsGradientCardProps> = ({
               <Text variant="p3" color="white" mb="xs">
                 {title}
               </Text>
-              <Row alignItems="center" mt="xs">
+              <Row
+                alignItems="center"
+                mt={Platform.OS === 'ios' ? 'xs' : 'none'}>
                 <Text variant="p4" color="white">
                   {subtitle}
                 </Text>

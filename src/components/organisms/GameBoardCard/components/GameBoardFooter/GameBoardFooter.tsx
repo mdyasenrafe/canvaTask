@@ -3,7 +3,7 @@ import {Box, Row, Text, TouchableOpacity} from '../../../../atom';
 import PrecipitationIcon from '../../../../../assets/icons/precipitationIcon.svg';
 import WeatherIcon from '../../../../../assets/icons/weatherIcon.svg';
 import LinearGradient from 'react-native-linear-gradient';
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 export const GameBoardFooter = () => {
   return (
@@ -14,7 +14,11 @@ export const GameBoardFooter = () => {
       <Box width={'65%'} pl="lg" justifyContent="center">
         <Row alignItems="center">
           <PrecipitationIcon />
-          <Text variant="p4" color="neutral" ml="sm" mb="xs">
+          <Text
+            variant="p4"
+            color="neutral"
+            ml="sm"
+            mb={Platform.OS == 'ios' ? 'xs' : 'none'}>
             25% Precipitation
           </Text>
         </Row>

@@ -2,7 +2,7 @@ import React from 'react';
 import PlayerPic1 from '../../../../../assets/images/player1.png';
 import PlayerPic2 from '../../../../../assets/images/player2.png';
 import {Box, Row, Text} from '../../../../atom';
-import {PlayerCard} from '../../../../molecules';
+import {PlayerCard} from '../../../../molecules/PlayerCard';
 
 export const GameBoardPlayers: React.FC = () => {
   return (

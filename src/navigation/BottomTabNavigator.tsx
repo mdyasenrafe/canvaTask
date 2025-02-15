@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {MainBottomTabParamList} from './types';
 import {palette} from '../theme/elements';
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {Box} from '../components/atom/Box';
 import {Text} from '../components/atom/Text';
 import {GameBoard, News, Rank, Register} from '../screens/main/bottomTab';
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: palette.black,
     borderColor: palette.black,
-    height: 120,
+    height: Platform.OS == 'ios' ? 120 : 90,
     borderTopWidth: 2,
     borderTopColor: '#EEEEEE',
   },
