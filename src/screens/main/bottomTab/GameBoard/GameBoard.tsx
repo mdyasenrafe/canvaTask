@@ -13,7 +13,7 @@ export const GameBoard = () => {
           <GameBoardCard />
           <GameBoardCard />
           <GameBoardCard />
-          <Box height={120} />
+          <Box height={150} />
         </Box>
       </ScrollView>
     </Screen>

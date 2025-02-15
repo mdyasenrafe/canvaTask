@@ -51,8 +51,19 @@ export const News = () => {
           />
           <GameBoardResults />
           <Box borderBottomWidth={1} borderBottomColor="lightGrey" pt={'xl'} />
+
+          <NewsCard
+            title="News"
+            description="Lorem Ipsum is a term for a completely meaningless text - sometimes read"
+            cardDetails={cardDetails}
+          />
+          <Box borderBottomWidth={1} borderBottomColor="lightGrey" pt={'xl'} />
+          <GameBoardResults />
+          <Box borderBottomWidth={1} borderBottomColor="lightGrey" pt={'xl'} />
+
           <NewsSystemMessage />
-          <Box height={120} />
+
+          <Box height={150} />
         </Box>
       </ScrollView>
     </Screen>
