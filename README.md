@@ -132,6 +132,14 @@ export * from './Button';
 // Importing the Button component elsewhere
 import { Button } from 'components';
 ```
+## Deployment
+For Android app installation, please follow these steps:
+
+1. Download the APK file from the provided Google Drive link.
+2. Install the APK on your Android device.
+
+[Android App Installation](https://drive.google.com/file/d/1ka7YHf_NSbsW4f6JzWM77AL5pt2JPgRU/view?usp=sharing)
+
 
 
 
