@@ -1,12 +1,21 @@
 import React from 'react';
-import {Box, Screen, Text, Row, RemoteImage} from '../../../components/atom';
+import {FlatList, ScrollView} from 'react-native';
+import {
+  Box,
+  Screen,
+  Text,
+  Row,
+  RemoteImage,
+  TouchableOpacity,
+} from '../../../components/atom';
 import LeftArrow from '../../../assets/icons/leftArrowIcon.svg';
 import ShareIcon from '../../../assets/icons/shareIconBlack.svg';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import ProfilePic from '../../../assets/images/player2.png';
 import {ChatHeaderAvatar} from '../../../components/molecules/ChatHeaderAvatar/ChatHeaderAvatar';
 import {ChatMessage} from '../../../components/molecules';
-import {ImageSourcePropType} from 'react-native';
+import PlusIcon from '../../../assets/icons/plusIcon.svg';
+import SendIcon from '../../../assets/icons/sendIcon.svg';
 
 export type TMessage = {
   id: number;
@@ -49,9 +58,10 @@ const messages: TMessage[] = [
 
 export const Chat: React.FC = () => {
   const {top} = useSafeAreaInsets();
+
   return (
     <Screen name="Chat" expandToTopEdge>
-      <Box>
+      <Box position="relative" height={'100%'}>
         <Box
           style={{paddingTop: top}}
           p="xl"
@@ -82,30 +92,45 @@ export const Chat: React.FC = () => {
           <Box />
         </Row>
 
-        <Box p="md">
-          {messages.map(message => (
-            <ChatMessage key={message.id} message={message} />
-          ))}
+        <Box p="md" flex={1}>
+          <FlatList
+            data={messages}
+            keyExtractor={item => item.id.toString()}
+            renderItem={({item}) => <ChatMessage message={item} />}
+            contentContainerStyle={{paddingBottom: 100}}
+            showsVerticalScrollIndicator={false}
+          />
         </Box>
 
-        {/*
-          <Box p="md" borderTopWidth={1} borderTopColor="lightGrey">
-            <Row alignItems="center">
-              <Box
-                flex={1}
-                borderWidth={1}
-                borderColor="lightGrey"
-                borderRadius="md"
-                p="sm"
-                mr="sm">
-                <Text variant="p2" color="grey">
-                  Add a comment...
-                </Text>
-              </Box>
-              <Button label="Send" onPress={() => {}} />
+        <Box
+          p="md"
+          borderTopWidth={1}
+          borderTopColor="lightGrey"
+          bg="white"
+          position="absolute"
+          bottom={0}
+          width="100%"
+          height={90}>
+          <Row alignItems="center" px="lg" width="100%">
+            <Row width="11%">
+              <PlusIcon width={20} height={20} />
             </Row>
-          </Box>
-        */}
+            <Box width="80%">
+              <Text variant="p2" color="grey">
+                Add a comment...
+              </Text>
+            </Box>
+            <TouchableOpacity
+              bg="primary"
+              width={40}
+              height={40}
+              borderRadius="full"
+              justifyContent="center"
+              alignItems="center">
+              <SendIcon />
+            </TouchableOpacity>
+          </Row>
+        </Box>
       </Box>
     </Screen>
   );
