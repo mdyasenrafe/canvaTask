@@ -35,7 +35,7 @@ export const NewsGradientCard: React.FC<NewsGradientCardProps> = ({
               <Text variant="p3" color="white" mb="xs">
                 {title}
               </Text>
-              <Row alignItems="center">
+              <Row alignItems="center" mt="xs">
                 <Text variant="p4" color="white">
                   {subtitle}
                 </Text>

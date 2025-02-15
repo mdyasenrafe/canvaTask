@@ -17,14 +17,14 @@ export const GameBoardHeader = () => {
   ];
 
   return (
-    <Box p="lg">
+    <Box>
       <Row alignItems="center" justifyContent="space-between">
         <Text color="primary" variant="p3">
           Yarkon Park, Tel Aviv | Court #2
         </Text>
         <ShareIcon />
       </Row>
-      <Row alignItems="center">
+      <Row alignItems="center" mt="sm">
         {cardDetails.map((item, index) => {
           const IconComponent = item.Icon;
           return (

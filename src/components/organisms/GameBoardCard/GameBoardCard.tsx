@@ -5,7 +5,9 @@ import {GameBoardFooter, GameBoardHeader, GameBoardPlayers} from './components';
 export const GameBoardCard = () => {
   return (
     <Box borderRadius="md" borderWidth={1.2} borderColor="lightGrey" mb="xl">
-      <GameBoardHeader />
+      <Box p="lg">
+        <GameBoardHeader />
+      </Box>
       <GameBoardPlayers />
       <GameBoardFooter />
     </Box>

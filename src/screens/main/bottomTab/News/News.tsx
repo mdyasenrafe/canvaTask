@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, RemoteImage, Row, Screen, Text} from '../../../../components/atom';
 import {
+  GameBoardResults,
   Header,
   NewsCard,
   NewsGradientCard,
@@ -12,6 +13,7 @@ import ClockIcon from '../../../../assets/icons/clockIcon.svg';
 import NewsBanner from '../../../../assets/images/newsBanner.png';
 import HorseIcon from '../../../../assets/images/horseLogo.png';
 import MessageIcon from '../../../../assets/icons/messageIcon.svg';
+import {GameBoardPlayers} from '../../../../components/organisms/GameBoardCard/components';
 
 export const News = () => {
   const cardDetails = [
@@ -47,6 +49,8 @@ export const News = () => {
             description="Lorem Ipsum is a term for a completely meaningless text - sometimes read"
             cardDetails={cardDetails}
           />
+          <GameBoardResults />
+          <Box borderBottomWidth={1} borderBottomColor="lightGrey" pt={'xl'} />
           <NewsSystemMessage />
           <Box height={120} />
         </Box>

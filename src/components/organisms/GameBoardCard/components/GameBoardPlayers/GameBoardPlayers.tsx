@@ -19,11 +19,13 @@ export const GameBoardPlayers: React.FC = () => {
           name="Oz Y."
           subtitle="(The Wiz)"
           borderColor="accentBlue"
-          isLastItem={false}
+          isLastItem={true}
         />
-        <Text fontSize={21} fontFamily="regular" px="sm" color="primary">
-          vs.
-        </Text>
+        <Box px="lg">
+          <Text fontSize={21} fontFamily="regular" color="primary">
+            vs.
+          </Text>
+        </Box>
         <PlayerCard
           name="player"
           subtitle="(nickname)"
@@ -35,7 +37,7 @@ export const GameBoardPlayers: React.FC = () => {
           subtitle="(nickname)"
           borderColor="primary"
           isPlaceholder
-          isLastItem={false}
+          isLastItem={true}
         />
       </Row>
     </Box>

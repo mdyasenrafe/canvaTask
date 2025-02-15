@@ -14,7 +14,7 @@ export const GameBoardFooter = () => {
       <Box width={'65%'} pl="lg" justifyContent="center">
         <Row alignItems="center">
           <PrecipitationIcon />
-          <Text variant="p4" color="neutral" ml="sm">
+          <Text variant="p4" color="neutral" ml="sm" mb="xs">
             25% Precipitation
           </Text>
         </Row>

@@ -40,11 +40,11 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({
           />
         )}
       </Row>
-      <Box>
+      <Box mt="sm">
         <Text variant="p4" textAlign="center">
           {name}
         </Text>
-        <Text color="neutral" variant="p5" textAlign="center">
+        <Text color="neutral" variant="p5" textAlign="center" mt="xs">
           {subtitle}
         </Text>
       </Box>

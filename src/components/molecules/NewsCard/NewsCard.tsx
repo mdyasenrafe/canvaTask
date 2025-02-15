@@ -27,7 +27,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
             {title}
           </Text>
           <Text>{description}</Text>
-          <Row alignItems="center">
+          <Row alignItems="center" mt="xs">
             {cardDetails.map((item, index) => {
               const IconComponent = item.Icon;
               return (
