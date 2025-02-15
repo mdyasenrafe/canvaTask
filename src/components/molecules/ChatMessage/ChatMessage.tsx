@@ -2,6 +2,8 @@ import React from 'react';
 import {Box, Row, Text, RemoteImage} from '../../../components/atom';
 import {TMessage} from '../../../screens/main';
 import LinearGradient from 'react-native-linear-gradient';
+import {palette} from '../../../theme/elements';
+import {Platform} from 'react-native';
 
 type ChatMessageProps = {
   message: TMessage;
@@ -11,8 +13,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({message}) => {
   const isCurrentUser = message.isCurrentUser;
 
   const bubbleStyle: any = {
-    borderWidth: 1,
-    borderColor: 'white',
     padding: 8,
     borderRadius: 10,
     width: '80%',
@@ -48,12 +48,21 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({message}) => {
           <Text variant="p3" color="white">
             {message.text}
           </Text>
-          <Text variant="p5" color="neutral" textAlign="right">
+          <Text
+            variant="p5"
+            color="neutral"
+            textAlign="right"
+            pt={Platform.OS == 'ios' ? 'md' : 'none'}>
             {message.timestamp}
           </Text>
         </LinearGradient>
       ) : (
-        <Box style={[bubbleStyle, {marginLeft: 8}]} bg="white">
+        <Box
+          style={[
+            bubbleStyle,
+            {marginLeft: 8, borderWidth: 1, borderColor: palette.lightGrey},
+          ]}
+          bg="white">
           {message.user && (
             <Text variant="p3_medium" fontWeight="500" color="deepBrown">
               {message.user}

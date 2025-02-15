@@ -54,6 +54,21 @@ const messages: TMessage[] = [
     timestamp: '20:00',
     isCurrentUser: true,
   },
+  {
+    id: 5,
+    user: 'Penn N. (panther)',
+    avatar: ProfilePic,
+    text: 'The dedication of the ball was stunning.',
+    timestamp: '20:00',
+  },
+  {
+    id: 6,
+    user: 'Penn N. (panther)',
+    avatar: ProfilePic,
+    text: 'I’m crossing my fingers that the next game will be crazy!',
+    timestamp: '20:00',
+    isCurrentUser: true,
+  },
 ];
 
 export const Chat: React.FC = () => {
