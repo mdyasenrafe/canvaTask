@@ -82,7 +82,6 @@ export function BottomTabNavigator() {
       tabBarShowLabel: true,
       headerShown: false,
       tabBarStyle: styles.tabBar,
-      // Added tabBarItemStyle to center the content vertically
       tabBarItemStyle: styles.tabBarItem,
       tabBarIcon: ({focused}) => renderIcon(route.name as RouteName, focused),
       tabBarLabel: () => <TabBarLabel name={route.name} />,
@@ -91,7 +90,7 @@ export function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Register"
+      initialRouteName="GameBoard"
       screenOptions={tabScreenOptions}>
       <BottomTab.Screen name="Register" component={Register} />
       <BottomTab.Screen name="GameBoard" component={GameBoard} />

@@ -21,3 +21,5 @@ export const BASE_COLORS = {
   grey: palette.grey,
   lightGrey: palette.lightGrey,
 };
+
+export type TColor = keyof typeof palette;

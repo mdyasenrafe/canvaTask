@@ -7,6 +7,8 @@ import PrecipitationIcon from '../../../assets/icons/precipitationIcon.svg';
 import WeatherIcon from '../../../assets/icons/weatherIcon.svg';
 import LinearGradient from 'react-native-linear-gradient';
 import {StyleSheet} from 'react-native';
+import {GameBoardPlayers} from './components';
+import ShareIcon from '../../../assets/icons/shareIcon.svg';
 
 export const GameBoardCard = () => {
   const cardDetails = [
@@ -22,9 +24,12 @@ export const GameBoardCard = () => {
   return (
     <Box borderRadius="md" borderWidth={1.2} borderColor="lightGrey" mb="xl">
       <Box p="lg">
-        <Text color="primary" variant="p3">
-          Yarkon Park, Tel Aviv | Court #2
-        </Text>
+        <Row alignItems="center" justifyContent="space-between">
+          <Text color="primary" variant="p3">
+            Yarkon Park, Tel Aviv | Court #2
+          </Text>
+          <ShareIcon />
+        </Row>
         <Row alignItems="center">
           {cardDetails.map((item, index) => {
             const IconComponent = item.Icon;
@@ -32,7 +37,7 @@ export const GameBoardCard = () => {
               <Row
                 key={index}
                 alignItems="center"
-                pr={index < cardDetails.length - 1 ? 'md' : undefined}>
+                pr={index < cardDetails.length - 1 ? 'md' : 'none'}>
                 <IconComponent {...item.iconProps} />
                 <Text ml="s" variant="p4" color="neutral">
                   {item.text}
@@ -42,6 +47,7 @@ export const GameBoardCard = () => {
           })}
         </Row>
       </Box>
+      <GameBoardPlayers />
       <Row
         justifyContent="space-between"
         borderTopWidth={1}
