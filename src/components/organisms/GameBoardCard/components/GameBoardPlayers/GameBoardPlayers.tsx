@@ -1,5 +1,6 @@
 import React from 'react';
-import ProfilePic1 from '../../../../../assets/images/profilePic.png';
+import PlayerPic1 from '../../../../../assets/images/player1.png';
+import PlayerPic2 from '../../../../../assets/images/player2.png';
 import {Box, Row, Text} from '../../../../atom';
 import {PlayerCard} from '../../../../molecules';
 
@@ -8,13 +9,13 @@ export const GameBoardPlayers: React.FC = () => {
     <Box p="lg">
       <Row alignItems="center" justifyContent="center" width="100%">
         <PlayerCard
-          source={ProfilePic1}
+          source={PlayerPic1}
           name="Mandler T."
           subtitle="(PRO)"
           borderColor="accentBlue"
         />
         <PlayerCard
-          source={ProfilePic1}
+          source={PlayerPic2}
           name="Oz Y."
           subtitle="(The Wiz)"
           borderColor="accentBlue"

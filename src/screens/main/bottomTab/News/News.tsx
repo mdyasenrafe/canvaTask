@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Row, Screen, Text} from '../../../../components/atom';
-import {Header} from '../../../../components/molecules';
+import {Header, NewsCard} from '../../../../components/molecules';
 import {ScrollView} from 'react-native';
 import {palette} from '../../../../theme/elements';
 import ClockIcon from '../../../../assets/icons/clockIcon.svg';
@@ -20,56 +20,16 @@ export const News = () => {
           height: '100%',
         }}>
         <Box p="xl">
-          <Box py="lg" borderBottomWidth={1} borderColor="lightGrey">
-            <Text color="primary" variant="p4">
-              News
-            </Text>
-            <Text>
-              Lorem Ipsum is a term for a completely meaningless text -
-              sometimes read
-            </Text>
-            <Row alignItems="center">
-              {cardDetails.map((item, index) => {
-                const IconComponent = item.Icon;
-                return (
-                  <Row
-                    key={index}
-                    alignItems="center"
-                    pr={index < cardDetails.length - 1 ? 'md' : 'none'}>
-                    <IconComponent {...item.iconProps} />
-                    <Text ml="s" variant="p4" color="neutral">
-                      {item.text}
-                    </Text>
-                  </Row>
-                );
-              })}
-            </Row>
-          </Box>
-          <Box py="lg" borderBottomWidth={1} borderColor="lightGrey">
-            <Text color="primary" variant="p4">
-              News
-            </Text>
-            <Text>
-              Lorem Ipsum is a term for a completely meaningless text -
-              sometimes read
-            </Text>
-            <Row alignItems="center">
-              {cardDetails.map((item, index) => {
-                const IconComponent = item.Icon;
-                return (
-                  <Row
-                    key={index}
-                    alignItems="center"
-                    pr={index < cardDetails.length - 1 ? 'md' : 'none'}>
-                    <IconComponent {...item.iconProps} />
-                    <Text ml="s" variant="p4" color="neutral">
-                      {item.text}
-                    </Text>
-                  </Row>
-                );
-              })}
-            </Row>
-          </Box>
+          <NewsCard
+            title="News"
+            description="Lorem Ipsum is a term for a completely meaningless text - sometimes read"
+            cardDetails={cardDetails}
+          />
+          <NewsCard
+            title="News"
+            description="Lorem Ipsum is a term for a completely meaningless text - sometimes read"
+            cardDetails={cardDetails}
+          />
           <Box height={120} />
         </Box>
       </ScrollView>
