@@ -7,6 +7,15 @@ A React Native project following **modular architecture** and **Atomic Design Pr
 
 For detailed installation instructions and setup steps, please refer to the [Installation Guide](https://github.com/mdyasenrafe/canvaTask/blob/main/installation.md).
 
+
+## Deployment
+For Android app installation, please follow these steps:
+
+1. Download the APK file from the provided Google Drive link.
+2. Install the APK on your Android device.
+
+[Android App Installation](https://drive.google.com/file/d/1ka7YHf_NSbsW4f6JzWM77AL5pt2JPgRU/view?usp=sharing)
+
 ---
 
 # Project Structure & Guidelines
@@ -132,13 +141,6 @@ export * from './Button';
 // Importing the Button component elsewhere
 import { Button } from 'components';
 ```
-## Deployment
-For Android app installation, please follow these steps:
-
-1. Download the APK file from the provided Google Drive link.
-2. Install the APK on your Android device.
-
-[Android App Installation](https://drive.google.com/file/d/1ka7YHf_NSbsW4f6JzWM77AL5pt2JPgRU/view?usp=sharing)
 
 
 
