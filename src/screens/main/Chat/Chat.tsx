@@ -4,9 +4,20 @@ import LeftArrow from '../../../assets/icons/leftArrowIcon.svg';
 import ShareIcon from '../../../assets/icons/shareIconBlack.svg';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import ProfilePic from '../../../assets/images/player2.png';
+import {ChatHeaderAvatar} from '../../../components/molecules/ChatHeaderAvatar/ChatHeaderAvatar';
+import {ChatMessage} from '../../../components/molecules';
+import {ImageSourcePropType} from 'react-native';
 
-// Example data. You can fetch this from your API or state management later.
-const messages = [
+export type TMessage = {
+  id: number;
+  user?: string;
+  avatar?: any;
+  text: string;
+  timestamp: string;
+  isCurrentUser?: boolean;
+};
+
+const messages: TMessage[] = [
   {
     id: 1,
     user: 'Penn N. (panther)',
@@ -32,66 +43,9 @@ const messages = [
     avatar: ProfilePic,
     text: 'I’m crossing my fingers that the next game will be crazy!',
     timestamp: '20:00',
+    isCurrentUser: true,
   },
 ];
-
-const Avatar = ({source}: any) => (
-  <Box mr="md" position="relative">
-    <RemoteImage
-      source={source}
-      style={{
-        width: 32,
-        height: 32,
-        borderRadius: 30,
-      }}
-    />
-    <Box
-      width={9}
-      height={9}
-      bg="green"
-      borderRadius="full"
-      position="absolute"
-      bottom={0}
-      right={0}
-    />
-  </Box>
-);
-
-const ChatMessage = ({message}: any) => (
-  <Row mb={message.avatar ? 'xl' : 'md'} alignItems="flex-start">
-    <Box width={40} height={40} alignSelf="flex-end">
-      {message?.avatar && (
-        <RemoteImage
-          source={message?.avatar}
-          style={{
-            width: '100%',
-            height: '100%',
-          }}
-        />
-      )}
-    </Box>
-    <Box
-      borderWidth={1}
-      ml="sm"
-      p="sm"
-      borderRadius="lg"
-      bg="white"
-      borderColor="white"
-      width={'80%'}>
-      {message?.user && (
-        <Text variant="p3_medium" fontWeight="500" color="deepBrown">
-          {message.user}
-        </Text>
-      )}
-      <Text variant="p3" mt="xs" color="deepBrown">
-        {message.text}
-      </Text>
-      <Text variant="p5" color="neutral" textAlign="right">
-        {message.timestamp}
-      </Text>
-    </Box>
-  </Row>
-);
 
 export const Chat: React.FC = () => {
   const {top} = useSafeAreaInsets();
@@ -120,10 +74,10 @@ export const Chat: React.FC = () => {
           bg="white">
           <ShareIcon />
           <Row>
-            <Avatar source={ProfilePic} />
-            <Avatar source={ProfilePic} />
-            <Avatar source={ProfilePic} />
-            <Avatar source={ProfilePic} />
+            <ChatHeaderAvatar source={ProfilePic} />
+            <ChatHeaderAvatar source={ProfilePic} />
+            <ChatHeaderAvatar source={ProfilePic} />
+            <ChatHeaderAvatar source={ProfilePic} />
           </Row>
           <Box />
         </Row>
