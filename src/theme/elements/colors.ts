@@ -8,6 +8,8 @@ export const palette = {
   red: '#FF5757',
   grey: '#C1C1C1',
   lightGrey: '#EEEEEE',
+  green: '#88EC65',
+  deepBrown: '#210C0C',
 };
 
 export const BASE_COLORS = {
@@ -20,6 +22,8 @@ export const BASE_COLORS = {
   red: palette.red,
   grey: palette.grey,
   lightGrey: palette.lightGrey,
+  green: palette.green,
+  deepBrown: palette.deepBrown,
 };
 
 export type TColor = keyof typeof palette;

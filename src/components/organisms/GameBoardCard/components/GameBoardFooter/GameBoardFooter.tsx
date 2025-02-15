@@ -4,8 +4,17 @@ import PrecipitationIcon from '../../../../../assets/icons/precipitationIcon.svg
 import WeatherIcon from '../../../../../assets/icons/weatherIcon.svg';
 import LinearGradient from 'react-native-linear-gradient';
 import {Platform, StyleSheet} from 'react-native';
+import {MainStackScreenProps} from '../../../../../navigation/types';
+import {useNavigation} from '@react-navigation/native';
 
 export const GameBoardFooter = () => {
+  const navigation =
+    useNavigation<MainStackScreenProps<'BottomTab'>['navigation']>();
+
+  const handleNavigation = () => {
+    navigation.navigate('Chat');
+  };
+
   return (
     <Row
       justifyContent="space-between"
@@ -29,7 +38,7 @@ export const GameBoardFooter = () => {
           </Text>
         </Row>
       </Box>
-      <TouchableOpacity width={'35%'}>
+      <TouchableOpacity width={'35%'} onPress={handleNavigation}>
         <LinearGradient
           colors={['#34506D', '#3498DB']}
           start={{x: 1, y: 0.5}}
