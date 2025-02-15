@@ -15,7 +15,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({message}) => {
   const bubbleStyle: any = {
     padding: 8,
     borderRadius: 10,
-    width: '80%',
+    width: '70%',
   };
 
   return (

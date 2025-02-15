@@ -16,6 +16,7 @@ import {ChatHeaderAvatar} from '../../../components/molecules/ChatHeaderAvatar/C
 import {ChatMessage} from '../../../components/molecules';
 import PlusIcon from '../../../assets/icons/plusIcon.svg';
 import SendIcon from '../../../assets/icons/sendIcon.svg';
+import {MainStackScreenProps} from '../../../navigation/types';
 
 export type TMessage = {
   id: number;
@@ -71,7 +72,7 @@ const messages: TMessage[] = [
   },
 ];
 
-export const Chat: React.FC = () => {
+export const Chat = ({navigation}: MainStackScreenProps<'Chat'>) => {
   const {top} = useSafeAreaInsets();
 
   return (
@@ -87,7 +88,9 @@ export const Chat: React.FC = () => {
             <Text variant="p2" color="primary">
               Monday, February 23 | 14:00 - Tel Aviv
             </Text>
-            <LeftArrow />
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+              <LeftArrow />
+            </TouchableOpacity>
           </Row>
         </Box>
 

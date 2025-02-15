@@ -3,6 +3,10 @@
 A React Native project following **modular architecture** and **Atomic Design Principles** for scalable code organization.  
 [Recommended Reading: React Native Folder Structure Best Practices](https://medium.com/@prathiba2796/react-native-best-practices-for-organizing-code-with-atomic-folder-structure-131858653eb1)
 
+## Installation
+
+For detailed installation instructions and setup steps, please refer to the [Installation Guide](https://github.com/mdyasenrafe/canvaTask/blob/main/installation.md).
+
 ---
 
 # Project Structure & Guidelines
